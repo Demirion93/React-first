@@ -42,18 +42,18 @@ class List extends React.Component {
     return (
       <div id="app">
         <section className={styles.component}>
-        <Hero titleText={this.props.title} image={this.props.image} />
-        <div className={styles.description}>
-        <h2 className={styles.title}>{ReactHtmlParser(this.props.description)}</h2>
-          <div className={styles.columns}>
-          {this.state.columns.map(({key, ...columnProps}) => (
-            <Column key={key} {...columnProps} />
-          ))}
+          <Hero titleText={this.props.title} image={this.props.image} />
+          <div className={styles.description}>
+            <h2 className={styles.title}>{ReactHtmlParser(this.props.description)}</h2>
+            <div className={styles.columns}>
+              {this.state.columns.map(({key, ...columnProps}) => (
+                <Column key={key} {...columnProps} />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className={styles.creator}>
-          <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>
-        </div>
+          <div className={styles.creator}>
+            <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>
+          </div>
         </section>
       </div>
     )
