@@ -5,6 +5,7 @@ import Container from '../Container/Container';
 import Icon from '../Icon/Icon';
 import {settings} from '../../data/dataStore';
 import PropTypes from 'prop-types';
+import Search from '../Search/Search';
 
 class Header extends React.Component {
 
@@ -25,6 +26,7 @@ class Header extends React.Component {
             <Link to='/' className={styles.logo}>
               <Icon name={logo} />
             </Link>
+            <Search></Search>
             <nav>
               <NavLink exact to='/' activeClassName='active'>Home</NavLink>
               <NavLink exact to='/info' activeClassName='active'>Info</NavLink>
