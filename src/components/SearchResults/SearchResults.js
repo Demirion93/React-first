@@ -9,7 +9,7 @@ class SearchResults extends React.Component {
 
   static propTypes = {
     cards: PropTypes.array,  
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     icon: PropTypes.string,
     addCard: PropTypes.func,
   }

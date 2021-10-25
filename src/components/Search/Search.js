@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 class Search extends React.Component {
 
   static propTypes = {
-    history: PropTypes.node,
+    history: PropTypes.object,
   }
 
   state = {
