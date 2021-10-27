@@ -9,7 +9,13 @@ import PropTypes from 'prop-types';
 class Search extends React.Component {
 
   static propTypes = {
+    text: PropTypes.string,
+    searchString: PropTypes.string,
     history: PropTypes.object,
+  }
+
+  static defaultProps = {
+    text: settings.search.defaultText,
   }
 
   state = {
@@ -29,12 +35,14 @@ class Search extends React.Component {
   }
 
   render() {
+    const {text} = this.props;
     const {value} = this.state;
     const {icon} = settings.search;
     return (
       <div className={styles.component}>
         <input
           type='text'
+          placeholder={text}
           value={value}
           onChange={event => this.handleChange(event)}
         />
