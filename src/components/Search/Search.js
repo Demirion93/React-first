@@ -19,7 +19,7 @@ class Search extends React.Component {
   }
 
   state = {
-    value: '',
+    value: this.props.searchString || '',
     visibleButtons: false,
   }
 
