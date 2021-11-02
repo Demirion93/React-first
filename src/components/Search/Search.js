@@ -19,7 +19,7 @@ class Search extends React.Component {
   }
 
   state = {
-    value: this.props.searchString || '',
+    value: location.pathname.split('/').pop() || '',
     visibleButtons: false,
   }
 
