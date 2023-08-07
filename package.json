@@ -9,7 +9,7 @@
     "build": "webpack --mode production",
     "lint": "eslint src/",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "husky": {
     "hooks": {
@@ -23,6 +23,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "http-server": "^13.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.7.0",
