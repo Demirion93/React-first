@@ -2,7 +2,7 @@ import React from 'react';
 import Home from '../Home/HomeContainer';
 import Info from '../Info/Info';
 import FAQ from '../FAQ/FAQ';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {HashRouter as Router, Route} from 'react-router-dom';
 import MainLayout from '../MainLayout/MainLayout';
 import {AnimatedSwitch} from 'react-router-transition';
 import styles from './App.scss';
@@ -10,7 +10,7 @@ import List from '../List/ListContainer';
 import SearchResults from '../SearchResults/SearchResultsContainer';
 
 const App = () => (
-  <BrowserRouter>
+  <Router>
     <MainLayout>
       <AnimatedSwitch
         atEnter={{ opacity: 0 }}
@@ -25,7 +25,7 @@ const App = () => (
         <Route exact path="/search/:id" component={SearchResults} />
       </AnimatedSwitch>
     </MainLayout>
-  </BrowserRouter>
+  </Router>
 );
 
 export default App;
